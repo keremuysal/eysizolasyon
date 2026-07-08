@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // Bu satır en kritik olanı
+  output: "export",
+  basePath: "/eysizolasyon",
+  assetPrefix: "/eysizolasyon/", // BU SATIR ÇOK ÖNEMLİ
   images: {
-    unoptimized: true, // GitHub Pages'te Next.js görsel optimizasyonu çalışmaz, bu yüzden kapatıyoruz
+    unoptimized: true,
   },
 };
 
