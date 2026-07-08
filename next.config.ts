@@ -9,4 +9,10 @@ const nextConfig: NextConfig = {
   },
 };
 
+const basePath = "/eysizolasyon";
+export const getPath = (path: string) => `${basePath}${path}`;
+
+// Kullanımı:
+<img src={getPath("/images/eys-logo.png")} />
+
 export default nextConfig;
