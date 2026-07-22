@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Clock, Award, Shield } from "lucide-react";
@@ -10,7 +11,7 @@ const slides = [
 ];
 
 const stats = [
-  { value: "39+", label: "Yıllık Tecrübe", icon: Clock },
+  { value: "39+", label: "Yıl Tecrübe", icon: Clock },
   { value: "500+", label: "Tamamlanan Proje", icon: Award },
   { value: "100%", label: "Müşteri Memnuniyeti", icon: Shield },
 ];
@@ -26,18 +27,18 @@ export default function Hero() {
       {/* Arka Planlar */}
       <div className="absolute inset-0 w-full h-full md:hidden">
         <Image src={slides[0].src} alt={slides[0].alt} fill className="object-cover" priority={true} sizes="(max-width: 768px) 100vw, 33vw" />
-        <div className="absolute inset-0 bg-[#0d1117]/75" />
+        <div className="absolute inset-0 bg-[#1e293b]/80" />
       </div>
 
       <div className="absolute inset-0 w-full h-full hidden md:grid md:grid-cols-3">
         {slides.map((slide, i) => (
           <div key={i} className="relative overflow-hidden w-full h-full">
             <Image src={slide.src} alt={slide.alt} fill className="object-cover" priority={true} sizes="(max-width: 768px) 100vw, 33vw" />
-            <div className="absolute inset-0" style={{ background: i === 1 ? "rgba(13,17,23,0.70)" : "rgba(13,17,23,0.60)" }} />
+            <div className="absolute inset-0" style={{ background: i === 1 ? "rgba(30, 41, 59, 0.85)" : "rgba(30, 41, 59, 0.75)" }} />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117]/60 via-[#0d1117]/30 to-[#0d1117]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1117]/80 via-transparent to-[#0d1117]/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/50 via-[#1e293b]/70 to-[#1e293b]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e293b]/90 via-[#1e293b]/50 to-[#1e293b]/70" />
       </div>
 
       {/* İçerik */}
@@ -49,12 +50,12 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="w-full flex flex-col items-center text-center max-w-5xl"
         >
-          <span className="inline-block mb-6 sm:mb-8 px-4 sm:px-5 py-2 sm:py-2.5 bg-[#0d1117]/85 backdrop-blur-sm border border-[#0ea5e9]/45 shadow-[0_0_0_1px_rgba(14,165,233,0.12)] text-[#7dd3fc] text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-[0.2em] rounded-full">
+          <span className="inline-block mb-6 sm:mb-8 px-4 sm:px-5 py-2 sm:py-2.5 bg-[#1e293b]/90 backdrop-blur-sm border border-[#0ea5e9]/30 shadow-[0_0_0_1px_rgba(14,165,233,0.12)] text-[#38bdf8] text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-[0.2em] rounded-full">
             1987'den Bu Yana Çerkezköy OSB
           </span>
           <div className="h-3 sm:h-5 w-full"></div>
           
-          <h1 className="font-display font-bold text-4xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#f0f4f8] leading-[1.15] uppercase tracking-tight text-center w-full">
+          <h1 className="font-display font-bold text-4xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#f8fafc] leading-[1.15] uppercase tracking-tight text-center w-full">
             Endüstriyel
             <br />
             <span className="text-[#0ea5e9]">İzolasyon</span> &{" "}
@@ -62,9 +63,9 @@ export default function Hero() {
             Havalandırma
           </h1>
           
-          <p className="mt-6 sm:mt-8 text-sm sm:text-lg text-[#94a3b8] leading-relaxed max-w-2xl text-center px-2">
+          <p className="mt-6 sm:mt-8 text-sm sm:text-lg text-[#cbd5e1] leading-relaxed max-w-2xl text-center px-2">
             Isı izolasyonu, havalandırma kanalları ve paslanmaz çelik baca
-            sistemlerinde 39 yıllık tecrübeyle Türkiye genelinde kusursuz 
+            sistemlerinde 39 yıllık tecrübeyle Türkiye genelinde kusursuz
             çözümler sunuyoruz.
           </p>
           <div className="h-3 sm:h-5 w-full"></div>
@@ -85,12 +86,12 @@ export default function Hero() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 w-full">
             {stats.map(({ value, label, icon: Icon }) => (
-              <div key={label} className="flex items-center justify-start gap-4 sm:gap-5 rounded-sm border border-[#2a3a4a] bg-[#0d1117]/60 backdrop-blur-md p-5 sm:p-6 overflow-hidden">
+              <div key={label} className="flex items-center justify-start gap-4 sm:gap-5 rounded-sm border border-[#475569] bg-[#334155]/60 backdrop-blur-md p-5 sm:p-6 overflow-hidden shadow-sm">
                 <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-sm bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex-shrink-0">
                   <Icon size={24} className="text-[#0ea5e9]" />
                 </div>
                 <div className="text-left flex-1">
-                  <p className="font-display font-bold text-2xl sm:text-3xl text-[#f0f4f8] leading-none">{value}</p>
+                  <p className="font-display font-bold text-2xl sm:text-3xl text-[#f8fafc] leading-none">{value}</p>
                   <p className="text-[12px] sm:text-sm font-medium text-[#94a3b8] uppercase tracking-wider mt-1.5">{label}</p>
                 </div>
               </div>

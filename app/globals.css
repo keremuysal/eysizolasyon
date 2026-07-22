@@ -3,14 +3,12 @@
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", sans-serif;
   --font-display: "Barlow Condensed", "Barlow Condensed Fallback", sans-serif;
-
-  /* Brand colors */
-  --color-background: #0d1117;
-  --color-foreground: #f0f4f8;
-  --color-primary: #0ea5e9;
-  --color-surface: #161d27;
-  --color-border: #2a3a4a;
-  --color-muted: #64748b;
+  --color-background: #1e293b; /* Soft Koyu Arka Plan (Slate 800) */
+  --color-foreground: #f8fafc; /* Parlamayan Beyaz Metin */
+  --color-primary: #0ea5e9;    /* Mavi marka rengi */
+  --color-surface: #334155;    /* Kartlar için bir ton açık arka plan (Slate 700) */
+  --color-border: #475569;     /* Yumuşak belirgin kenarlıklar (Slate 600) */
+  --color-muted: #94a3b8;
 }
 
 @layer base {
@@ -21,11 +19,9 @@
   }
 
   html, body {
-    /* Mobil taşmaları engellemek için */
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
-    
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);

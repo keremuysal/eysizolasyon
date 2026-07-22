@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
+  // Buradaki basePath, assetPrefix, output: 'export' 
+  // gibi satırların HEPSİNİ SİL.
 };
 
 export default nextConfig;

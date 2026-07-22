@@ -10,7 +10,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full max-w-[100vw] bg-[#0d1117] overflow-hidden m-0 p-0 gap-y-16 sm:gap-y-24 lg:gap-y-32 pb-10">
+    <main className="flex flex-col w-full max-w-[100vw] bg-[#1e293b] overflow-hidden m-0 p-0 gap-y-16 sm:gap-y-24 lg:gap-y-32 pb-10">
       <Header />
       <Hero />
       <Services />
